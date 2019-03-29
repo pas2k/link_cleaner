@@ -11,10 +11,10 @@ DIR = os.path.join(os.path.realpath(os.path.dirname(__file__)), 'src')
 
 # Find match patterns from code
 hosts = []
-with open(os.path.join(DIR, 'redirectify.js'), 'r') as fid:
+with open(os.path.join(DIR, 'link_cleaner.js'), 'r') as fid:
     for line in fid:
         if line.startswith('  ["*://'):
-            hosts.append(' '*4 + line[len('  ['):line.index(', /')+1] + '\n')
+            hosts.append(' '*4 + line[len('  ['):line.index('",')+2] + '\n')
 
 # Get other bits of existing manifest
 bits1 = []

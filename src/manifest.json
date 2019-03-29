@@ -1,31 +1,22 @@
 {
 
   "manifest_version": 2,
-  "name": "Redirectify",
-  "version": "0.2.4",
+  "name": "Link cleaner for dirty links",
+  "version": "0.1",
 
-  "description": "Redirects requests for PDFs of papers at some popular sites to their corresponding HTML index pages.",
+  "description": "Cleans dirty links to prevent tracking",
 
-  "homepage_url": "https://github.com/imurray/redirectify",
+  "homepage_url": "https://github.com/pas2k/link_cleaner",
 
   "permissions": [
-    "*://*.arxiv.org/pdf/*",
-    "*://xxx.lanl.gov/pdf/*",
-    "*://arxiv-export-lb.library.cornell.edu/pdf/*",
-    "*://*.openreview.net/pdf*",
-    "*://proceedings.mlr.press/*.pdf",
-    "*://*.jmlr.org/papers/*.pdf",
-    "*://jmlr.csail.mit.edu/papers/*.pdf",
-    "*://delivery.acm.org/*",
-    "*://papers.nips.cc/*.pdf",
-    "*://pdfs.semanticscholar.org/*",
-    "*://*.biorxiv.org/content*",
+    "*://www.google.com/",
+    "*://www.youtube.com/",
     "webRequest",
     "webRequestBlocking"
   ],
 
   "background": {
-    "scripts": ["redirectify.js"]
+    "scripts": ["link_cleaner.js"]
   }
 
 }
